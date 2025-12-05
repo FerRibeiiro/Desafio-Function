@@ -1,27 +1,30 @@
-// Calculo de partida Rankeadas
+// Cálculo de partida Rankeadas
 function calculoRankeada(vitorias, derrotas) {
-    // Variavel de saldo de vitórias
-    let saldoVitrorias = vitorias - derrotas
-    // Variavel de nivel de Rankeada
-    let nivel = ""
+    // Variável de saldo de vitórias
+    let saldoVitorias = vitorias - derrotas;
+    // Variável de nível de Rankeada
+    let nivel = "";
 
-    //Decisão de Rankeada
-    if (vitorias = 10) {
-        nivel = "Ferro"
+    // Decisão de Rankeada
+    if (vitorias < 10) {
+        nivel = "Ferro";
     } else if (vitorias >= 11 && vitorias <= 20) {
-        nivel = "Bronze"
+        nivel = "Bronze";
     } else if (vitorias >= 21 && vitorias <= 50) {
-        nivel = "Prata"
+        nivel = "Prata";
     } else if (vitorias >= 51 && vitorias <= 80) {
-        nivel = "Ouro"
+        nivel = "Ouro";
     } else if (vitorias >= 81 && vitorias <= 90) {
-        nivel = "Diamante"
+        nivel = "Diamante";
     } else if (vitorias >= 91 && vitorias <= 100) {
-        nivel = "Lendário"
+        nivel = "Lendário";
     } else if (vitorias >= 101) {
-        nivel = "Imortal"
+        nivel = "Imortal";
     }
 
     // Resultado Rankeada
-    return `O Herói tem de saldo de ${saldoVitorias} está no nível de ${nivel}`
+    return `O Herói tem de saldo de ${saldoVitorias} está no nível de ${nivel}`;
 }
+
+// Calculo de Rankeada e exibição de resultado
+console.log(calculoRankeada(250, 120));
